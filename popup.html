@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <body>
+        <h3>Export</h3>
+        <div>
+            <form id="export-form">
+                <label for="domain">Domain (example.com):</label><br><br>
+                <input type="text" id="domain" pattern="[\w][\S]+" required><br><br>
+                <input type="submit" id="export" value="Export"></input>
+            </form>
+        </div>
+        <h3>Import</h3>
+        <div>
+            <form id="import-form">
+                <label for="url">URL (https://www.example.com):</label><br><br>
+                <input type="text" id="url" pattern="[\w][\S]+" required><br><br>
+                <label for="cookies-json">Cookies JSON file:</label><br><br>
+                <input type="file" id="cookies-json" accept=".json" required><br><br>
+                <input type="submit" id="import" value="Import"></input>
+            </form>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
