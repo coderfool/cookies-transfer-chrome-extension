@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
-    chrome.cookies.getAll({domain: request.domain}, (cookies) => {
+    chrome.cookies.getAll({url: request.url}, cookies => {
         sendResponse(cookies)
     })
     return true
